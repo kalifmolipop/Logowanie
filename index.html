@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+   
+   
+        <form class="container">
+            <p id="text">Dane klienta</p>
+            
+             <div class="bok1">
+            <label for="name">Imię</label>
+            <input type="text" id="name" name="name" onfocus="myName()"><br>
+
+            <label for="surname">Nazwisko:</label>
+            <input type="text" id="surname" name="surname" onfocus="myName()"><br>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required><br>
+
+            <label for="phone">E-mail:</label>
+            <input oncopy="myFunction()" type="email" id="email" name="emial" required><br>
+
+            <p>Podaj swoją płeć:</p>
+            <div class="controls">
+            
+            Kobieta<input class="plec"type="radio" name="Płeć" value="Kobieta">
+            Mężczyzna<input class="plec" type="radio" name="Płeć" value="Mężczyzna">
+            Inne<input class="plec" type="radio" name="Płeć" value="Inne">
+            </div><br>
+            <label for="contact">Dane kontaktowe:</label><br>
+            <textarea id="contact" name="contact" rows="4" cols="50" ondragstart="przeciaganie"></textarea><br>
+
+          
+          
+            
+        </div>
+        <div class="bok2">
+            <p id="tex1">Wybór mieszkania</p>
+
+            <label for="name">Rodzaj domu</label>
+            <select id="dom" name="dom">
+                <option value="0"></option>
+                <option value="1">bliźniak</option>
+                <option value="2">dom w zabudowie szeregowej</option>
+                <option value="3">dom jednorodzinny</option>
+                <option value="4">jednorodzinny wolnostojący</option>
+            </select><br><br>
+
+            <label for="name">Wielkość domu</label>
+            <select id="dom" name="dom">
+                <option value="0"></option>
+                <option value="1">50m2</option>
+                <option value="2">100m2</option>
+                <option value="3">150m2</option>
+                <option value="4">200m2</option>
+            </select><br><br>
+
+            <label for="name">Działka</label>
+            <select id="dom" name="dom">
+                <option value="0"></option>
+                <option value="1">0.5ha</option>
+                <option value="2">1ha</option>
+                <option value="3">2ha</option>
+                <option value="4">wiecej</option>
+            </select><br><br>
+
+            <label for="name">Kolor domu</label>
+            <select name="kolory" onchange="zmien()">
+                <option id="kolor0"value="0" onfocus="myName()"></option>
+                <option id="kolor1"value="white">Biały</option>
+                <option id="kolor2"value="black">Czarny</option>
+                <option id="kolor3"value="gray">Szary</option>
+                <option id="kolor4"value="claret">Zielony</option>
+            </select><br><br>
+
+
+            <label for="name">Styl zabudowy</label>
+            <select id="dom" name="dom">
+                <option value="0"></option>
+                <option value="1">Renesansowy</option>
+                <option value="2">Bizantyjski</option>
+                <option value="3">Nowoczesny</option>
+                <option value="4">Barokowy</option>
+            </select><br><br>
+
+            <label for="name">Miasto</label>
+            <select id="dom" name="dom">
+                <option value="0"></option>
+                <option value="1">Warszawa</option>
+                <option value="2">Gdańsk</option>
+                <option value="3">Kraków</option>
+                <option value="4">Inne</option>
+            </select><br><br>
+
+            <div class="cont">
+                <input id="submit"type="submit" value="Wyślij">
+                <input id="reset"type="reset" przeslanie="wyslanie()"value="Wyczyść">
+            </div>
+        </div>
+        </form>
+
+        <script>
+            function zmien() {
+                document.getElementById("kolor1").style.backgroundColor = "white";
+                document.getElementById("kolor2").style.backgroundColor = "black";
+                document.getElementById("kolor3").style.backgroundColor = "gray";
+                document.getElementById("kolor4").style.backgroundColor = "green";
+            }
+            function myFunction() {
+            document.getElementById("demo").innerHTML = "You copied text!"
+            }
+        </script>
+
+
+</body>
+</html>
